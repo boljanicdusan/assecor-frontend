@@ -1,27 +1,29 @@
-# Assecor
+# Assecor frontend solution
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
+## General
 
-## Development server
+This project is a simple web app, which visualizes the API data. The framework used for development is Angular. The API used for this app is SWAPI. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+You can see the lists of all Star Wars movies, characters, and planets with their own details pages. On the film details page, you can find lists of all characters and planets that exist in that film, with links to their details pages. And on the character and planet details pages, you can find the list of films related to that character/planet.
 
-## Code scaffolding
+## Project structure
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Since the web app is pretty small, there is just one module (AppModule) with one routing module (AppRoutingModule).
 
-## Build
+Components:
+* layout components: navbar and footer
+* home component
+* film components: film-list, film-list-item, film-form, film-details
+* character components: character-list, character-list-item, character-form, character-details
+* planet components: planet-list, planet-list-item, planet-form, planet-details
+* helper functions - shared functions used on many places in the app  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Setup
 
-## Running unit tests
+run `npm install` command to install the dependencies
+run `ng serve` command to run the app
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Dependencies and packages
 
-## Running end-to-end tests
+* Bootstrap 4.5.2
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

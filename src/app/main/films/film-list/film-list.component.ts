@@ -1,7 +1,8 @@
-import { FilmService } from './../film.service';
 import { Component, OnInit } from '@angular/core';
-import { Film } from '../film.model';
 import { ActivatedRoute } from '@angular/router';
+
+import { FilmService } from '@films/film.service';
+import { Film } from '@films/film.model';
 
 @Component({
     selector: 'app-film-list',

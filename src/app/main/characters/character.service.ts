@@ -6,7 +6,6 @@ import { environment } from '@environments/environment.prod';
 import { StarWarsResponse } from '../star-wars-response.model';
 import { Character } from './character.model';
 import { getIdFromUrl } from 'src/app/helpers/get-id-from-url.function';
-import { SafeResourceUrl } from '@angular/platform-browser';
 
 @Injectable({
     providedIn: 'root'

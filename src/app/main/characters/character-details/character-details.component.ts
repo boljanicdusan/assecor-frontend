@@ -1,12 +1,13 @@
-import { getIdFromUrl } from 'src/app/helpers/get-id-from-url.function';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import { getIdFromUrl } from '@helpers/get-id-from-url.function';
 import { PlanetService } from '@planets/planet.service';
 import { FilmService } from '@films/film.service';
 import { CharacterService } from '@characters/character.service';
 import { Planet } from '@planets/planet.model';
-import { Character } from './../character.model';
-import { Component, OnInit } from '@angular/core';
+import { Character } from '@characters/character.model';
 import { Film } from '@films/film.model';
-import { ActivatedRoute, Router } from '@angular/router';
 import { getDetailsUrl } from '@helpers/get-details-url.function';
 
 declare var $;

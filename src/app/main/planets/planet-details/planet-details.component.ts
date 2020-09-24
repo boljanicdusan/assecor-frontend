@@ -1,9 +1,9 @@
-import { FilmService } from '@films/film.service';
-import { CharacterService } from '@characters/character.service';
-import { PlanetService } from '@planets/planet.service';
 import { Component, OnInit } from '@angular/core';
-import { Planet } from '@planets/planet.model';
 import { ActivatedRoute, Router } from '@angular/router';
+
+import { FilmService } from '@films/film.service';
+import { PlanetService } from '@planets/planet.service';
+import { Planet } from '@planets/planet.model';
 import { getDetailsUrl } from '@helpers/get-details-url.function';
 import { Film } from '@films/film.model';
 
@@ -22,7 +22,6 @@ export class PlanetDetailsComponent implements OnInit {
     constructor(
         private planetService: PlanetService,
         private filmService: FilmService,
-        private characterService: CharacterService,
         private activatedRoute: ActivatedRoute,
         private router: Router
     ) { }

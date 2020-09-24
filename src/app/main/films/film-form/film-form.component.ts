@@ -1,5 +1,5 @@
-import { Film } from './../film.model';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Film } from '@films/film.model';
 
 @Component({
     selector: 'app-film-form',

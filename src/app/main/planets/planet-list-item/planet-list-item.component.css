@@ -1,0 +1,14 @@
+div.a-list-item-body {
+    position: relative;
+    height: 175px;
+}
+
+div.a-list-item {
+    min-height: 440px;
+
+}
+
+p.a-list-item-footer {
+    position: absolute;
+    bottom: 0px;
+}

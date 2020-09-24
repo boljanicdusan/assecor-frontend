@@ -1,8 +1,9 @@
-import { Planet } from '@planets/planet.model';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { getDetailsUrl } from '@helpers/get-details-url.function';
 import { getARandomImage } from '@helpers/get-a-random-image.function';
+import { Planet } from '@planets/planet.model';
 
 @Component({
     selector: 'app-planet-list-item',

@@ -1,8 +1,9 @@
-import { StarWarsResponse } from './../star-wars-response.model';
-import { environment } from '@environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin } from 'rxjs';
+
+import { environment } from '@environments/environment.prod';
+import { StarWarsResponse } from './../star-wars-response.model';
 import { Film } from './film.model';
 import { getIdFromUrl } from 'src/app/helpers/get-id-from-url.function';
 

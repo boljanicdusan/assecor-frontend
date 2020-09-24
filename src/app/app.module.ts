@@ -23,32 +23,32 @@ import { MainComponent } from './main/main.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    FooterComponent,
-    HomeComponent,
-    FilmListComponent,
-    FilmListItemComponent,
-    FilmDetailsComponent,
-    FilmFormComponent,
-    CharacterListComponent,
-    CharacterListItemComponent,
-    CharacterDetailsComponent,
-    CharacterFormComponent,
-    PlanetListComponent,
-    PlanetListItemComponent,
-    PlanetDetailsComponent,
-    PlanetFormComponent,
-    MainComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        FooterComponent,
+        HomeComponent,
+        FilmListComponent,
+        FilmListItemComponent,
+        FilmDetailsComponent,
+        FilmFormComponent,
+        CharacterListComponent,
+        CharacterListItemComponent,
+        CharacterDetailsComponent,
+        CharacterFormComponent,
+        PlanetListComponent,
+        PlanetListItemComponent,
+        PlanetDetailsComponent,
+        PlanetFormComponent,
+        MainComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

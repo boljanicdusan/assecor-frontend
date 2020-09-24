@@ -1,7 +1,8 @@
-import { Planet } from '@planets/planet.model';
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 import { environment } from '@environments/environment.prod';
+import { Planet } from '@planets/planet.model';
 import { Observable, forkJoin } from 'rxjs';
 import { StarWarsResponse } from '../star-wars-response.model';
 import { getIdFromUrl } from 'src/app/helpers/get-id-from-url.function';

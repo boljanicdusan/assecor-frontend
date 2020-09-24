@@ -1,7 +1,8 @@
-import { CharacterService } from '@characters/character.service';
-import { Character } from './../character.model';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
+import { CharacterService } from '@characters/character.service';
+import { Character } from '@characters/character.model';
 
 @Component({
     selector: 'app-character-list',

@@ -31,6 +31,8 @@ body {
     max-height: 420px;
     background-color: #efefef;
     margin: 20px 5px;
+    padding-left: auto;
+    padding-right: auto;
 }
 
 .a-list-item-header img {
