@@ -1,0 +1,16 @@
+<div class="a-list-item">
+    <div class="a-list-item-header">
+        <img src="assets/images/characters/{{image}}" alt="SW">
+    </div>
+    <div class="a-list-item-body">
+        <h5>{{ character?.name }}</h5>
+        <p>
+            Große: {{ character?.height }} <br>
+            Gweicht: {{ character?.mass }} <br>
+            Gender: {{ character?.gender }}
+        </p>
+        <p class="a-list-item-footer">
+            <span class="cursor-pointer" (click)="goToDetails(character.url)">Mehr Informationen....</span>
+        </p>
+    </div>
+</div>

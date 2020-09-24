@@ -1,0 +1,9 @@
+<div class="a-header text-center">
+    <h1>Charaktere</h1>
+</div>
+
+<div class="row">
+    <div *ngFor="let character of characters" class="col-lg-4 col-md-6 col-sm-12">
+        <app-character-list-item [character]="character"></app-character-list-item>
+    </div>
+</div>

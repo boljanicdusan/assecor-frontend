@@ -1,0 +1,62 @@
+<div class="a-details-page">
+    <div class="a-details-header text-center">
+        <h4>Filmdeatils</h4>
+        <hr>
+        <h1>{{ film?.title }}</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12 a-details-section">
+            <h5>Details:</h5>
+            <p>
+                <span class="a-details-key">Details: </span> <span class="a-details-value">{{ film?.director }}</span> <br>
+                <span class="a-details-key">Produzenten: </span> <span class="a-details-value">{{ film?.producer }}</span> <br>
+                <span class="a-details-key">Erscheinungsdatum: </span> <span class="a-details-value">{{ film?.release_date }}</span>
+            </p>
+            <p>
+                <span class="a-details-value">{{ film?.opening_crawl }}</span>
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <img class="a-details-img" src="assets/images/films/Unbenannt@2x.png" alt="SW">
+        </div>
+    </div>
+
+    <div class="a-details-links-section">
+        <h5>Charaktere:</h5>
+        <div class="a-details-links">
+            <div class="a-details-link" *ngFor="let character of characters" (click)="goToDetails(character.url, 'characters')">
+                {{ character.name }}
+            </div>
+            <div class="a-details-link" data-toggle="modal" data-target="#characterFormModal">...</div>
+        </div>
+
+        <h5>Planeten:</h5>
+        <div class="a-details-links">
+            <div class="a-details-link" *ngFor="let planet of planets" (click)="goToDetails(planet.url, 'planets')">
+                {{ planet.name }}
+            </div>
+            <div class="a-details-link" data-toggle="modal" data-target="#planetFormModal">...</div>
+        </div>
+    </div>
+</div>
+
+<!-- Character Form Modal -->
+<div class="modal fade" id="characterFormModal" tabindex="-1" role="dialog" aria-labelledby="characterFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <app-character-form (submitted)="close('characterFormModal')"></app-character-form>
+        </div>
+    </div>
+</div>
+<!-- Character Form Modal End -->
+
+<!-- Planet Form Modal -->
+<div class="modal fade" id="planetFormModal" tabindex="-1" role="dialog" aria-labelledby="planetFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <app-planet-form (submitted)="close('planetFormModal')"></app-planet-form>
+        </div>
+    </div>
+</div>
+<!-- Character Form Modal End -->

@@ -1,0 +1,12 @@
+.main-body {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 860px;
+}
+
+@media only screen and (max-width: 720px) {
+    .main-body {
+        width: 98%;
+    }
+}

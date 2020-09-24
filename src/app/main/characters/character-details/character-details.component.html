@@ -1,0 +1,50 @@
+<div class="a-details-page">
+    <div class="a-details-header text-center">
+        <h4>Characterdeatils</h4>
+        <hr>
+        <h1>{{ character?.name }}</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12 a-details-section">
+            <h5>Details:</h5>
+            <p>
+                <span class="a-details-key">Größe: </span> <span class="a-details-value">{{ character?.height }}</span> <br>
+                <span class="a-details-key">Gewicht: </span> <span class="a-details-value">{{ character?.mass }}</span> <br>
+                <span class="a-details-key">Haarfarbe: </span> <span class="a-details-value">{{ character?.hair_color }}</span> <br>
+                <span class="a-details-key">Augenfarbe: </span> <span class="a-details-value">{{ character?.eye_color }}</span> <br>
+                <span class="a-details-key">Geburtsjahr: </span> <span class="a-details-value">{{ character?.birth_year }}</span> <br>
+                <span class="a-details-key">Geschlecht: </span> <span class="a-details-value">{{ character?.gender }}</span>
+            </p>
+            <p>
+                <span class="a-details-key">Heimatplanet:</span>
+                <span class="a-details-link" (click)="goToDetails(character?.homeworld, 'planets')">
+                    {{ homeplanet?.name }}
+                </span>
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <img class="a-details-img" src="assets/images/characters/Unbenannt-2@2x.png" alt="SW">
+        </div>
+    </div>
+
+    <div class="a-details-links-section">
+        <h5>Filme:</h5>
+        <div class="a-details-links">
+            <div class="a-details-link" *ngFor="let film of films" (click)="goToDetails(film.url, 'films')">
+                {{ film.title }}
+            </div>
+            <div class="a-details-link" data-toggle="modal" data-target="#filmFormModal">...</div>
+        </div>
+    </div>
+</div>
+
+<!-- Film Form Modal -->
+<div class="modal fade" id="filmFormModal" tabindex="-1" role="dialog" aria-labelledby="filmFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <app-film-form (submitted)="close('filmFormModal')"></app-film-form>
+        </div>
+    </div>
+</div>
+<!-- Film Form Modal End -->

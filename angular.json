@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "assecor"
+    }
+  },
+  "defaultProject": "assecor",
+  "cli": {
+    "analytics": "d3cc776c-e86f-490b-b4ba-3ef0636b14eb"
+  }
 }

@@ -1,0 +1,35 @@
+<div class="nav-container">
+    <nav class="navbar navbar-expand-lg navbar-light a-nav">
+        <a class="navbar-brand" routerLink="/home">
+            <div class="a-logo">
+                <img src="/assets/images/star_wars/Star_Wars_logo_logotype.png" alt="Start wars">
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="a-ul-nav navbar-nav">
+                <li class="a-nav-item nav-item">
+                    <a class="a-nav-link nav-link" [routerLink]="['/home']" routerLinkActive="active-link"><span>Star Wars</span></a>
+                </li>
+                <li class="a-nav-item nav-item">
+                    <a class="a-nav-link nav-link" [routerLink]="['/app/films']" routerLinkActive="active-link"><span>Filme</span></a>
+                </li>
+                <li class="a-nav-item nav-item">
+                    <a class="a-nav-link nav-link" [routerLink]="['/app/characters']" routerLinkActive="active-link"><span>Charaktere</span></a>
+                </li>
+                <li class="a-nav-item nav-item">
+                    <a class="a-nav-link nav-link" [routerLink]="['/app/planets']" routerLinkActive="active-link"><span>Planeten</span></a>
+                </li>
+            </ul>
+          <form class="a-search-form form-inline" (ngSubmit)="search()">
+            <input [(ngModel)]="searchValue" name="search" class="a-search-input form-control" type="text" placeholder="Suche" aria-label="Search">
+            <span class="a-search-icon">
+                <img src="../../../assets/search-black-18dp.svg" (click)="search()">
+            </span>
+          </form>
+        </div>
+    </nav>
+</div>

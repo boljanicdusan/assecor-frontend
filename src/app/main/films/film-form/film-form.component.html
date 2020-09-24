@@ -1,0 +1,70 @@
+<div class="a-form">
+    <h5>Film hinzufügen</h5>
+
+    <form #form="ngForm" (ngSubmit)="form.valid && submit()">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="titleInput">Titel</label>
+                    <input type="text" name="title" [(ngModel)]="film.title" #title="ngModel" class="form-control" id="titleInput" placeholder="Titel eingeben" required>
+                    <div *ngIf="title.invalid && form.submitted" class="a-input-invalid">
+                        Titel wird benötigt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="directorInput">Director</label>
+                    <input type="text" name="director" [(ngModel)]="film.director" #director="ngModel" class="form-control" id="directorInput" placeholder="Adresszusatz eingeben" required>
+                    <div *ngIf="director.invalid && form.submitted" class="a-input-invalid">
+                        Director wird benötigt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="producerInput">Producent</label>
+                    <select class="form-control" name="producer" [(ngModel)]="film.producer" #producer="ngModel" id="producerInput" required>
+                        <option></option>
+                        <option>George Lukas</option>
+                        <option>Dusan</option>
+                    </select>
+                    <div *ngIf="producer.invalid && form.submitted" class="a-input-invalid">
+                        Producent wird benötigt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="releaseDateInput">Erscheinungsdatum</label>
+                    <input type="number" name="releaseDate" [(ngModel)]="film.release_date" #releaseDate="ngModel" class="form-control" id="releaseDateInput" placeholder="YYYY" required>
+                    <div *ngIf="releaseDate.invalid && form.submitted" class="a-input-invalid">
+                        Erscheinungsdatum wird benötigt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="descriptionInput">Beschreibung</label>
+                    <textarea class="form-control" name="description" [(ngModel)]="film.opening_crawl" #description="ngModel" id="descriptionInput" rows="3" placeholder="Beschreibung" required></textarea>
+                    <div *ngIf="description.invalid && form.submitted" class="a-input-invalid">
+                        Beschreibung wird benötigt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a-form-buttons">
+            <button type="button" (click)="close()" class="a-button-close">Abbrechen</button>
+            <button type="submit" class="a-button-save">Charakter hinzufügen</button>
+        </div>
+    </form>
+
+</div>

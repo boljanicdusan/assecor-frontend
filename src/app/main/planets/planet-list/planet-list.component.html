@@ -1,0 +1,10 @@
+<div class="a-header text-center">
+    <h1>Planeten</h1>
+</div>
+
+<div class="row">
+    <div *ngFor="let planet of planets" class="col-lg-4 col-md-6 col-sm-12">
+        <app-planet-list-item [planet]="planet"></app-planet-list-item>
+    </div>
+</div>
+

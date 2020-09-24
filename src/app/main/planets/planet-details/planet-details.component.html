@@ -1,0 +1,44 @@
+<div class="a-details-page">
+    <div class="a-details-header text-center">
+        <h4>Planetendeatils</h4>
+        <hr>
+        <h1>{{ planet?.name }}</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12 a-details-section">
+            <h5>Details:</h5>
+            <p>
+                <span class="a-details-key">Terrain: </span> <span class="a-details-value">{{ planet?.terrain }}</span> <br>
+                <span class="a-details-key">Climate: </span> <span class="a-details-value">{{ planet?.climate }}</span> <br>
+                <span class="a-details-key">Diameter: </span> <span class="a-details-value">{{ planet?.diameter }}</span> <br>
+                <span class="a-details-key">Gravity: </span> <span class="a-details-value">{{ planet?.gravity }}</span> <br>
+                <span class="a-details-key">Population: </span> <span class="a-details-value">{{ planet?.population }}</span> <br>
+                <span class="a-details-key">Rotation period: </span> <span class="a-details-value">{{ planet?.rotation_period }}</span>
+            </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <img class="a-details-img" src="assets/images/planets/Unbenannt@2x.png" alt="SW">
+        </div>
+    </div>
+
+    <div class="a-details-links-section">
+        <h5>Filme</h5>
+        <div class="a-details-links">
+            <div class="a-details-link" *ngFor="let film of films" (click)="goToDetails(film.url, 'films')">
+                {{ film.title }}
+            </div>
+            <div class="a-details-link" data-toggle="modal" data-target="#filmFormModal">...</div>
+        </div>
+    </div>
+</div>
+
+<!-- Film Form Modal -->
+<div class="modal fade" id="filmFormModal" tabindex="-1" role="dialog" aria-labelledby="filmFormModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <app-film-form (submitted)="close('filmFormModal')"></app-film-form>
+        </div>
+    </div>
+</div>
+<!-- Film Form Modal End -->

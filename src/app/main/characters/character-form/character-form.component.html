@@ -1,0 +1,92 @@
+<div class="a-form">
+    <h5>Charakter hinzufügen</h5>
+
+    <form #form="ngForm" (ngSubmit)="form.valid && submit()">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="nameInput">Name</label>
+                    <input type="text" name="name" [(ngModel)]="character.name" #name="ngModel" class="form-control" id="nameInput" placeholder="Name eingeben" required>
+                    <div *ngIf="name.invalid && form.submitted" class="a-input-invalid">
+                        Name wird benötigt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="heightInput">Große</label>
+                    <input type="number" name="height" [(ngModel)]="character.height" #height="ngModel" class="form-control" id="heightInput" placeholder="Meter" required>
+                    <div *ngIf="height.invalid && form.submitted" class="a-input-invalid">
+                        Große wird benötigt.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="massInput">Gweicht</label>
+                    <input type="number" name="mass" [(ngModel)]="character.mass" #mass="ngModel" class="form-control" id="massInput" placeholder="Kg" required>
+                    <div *ngIf="mass.invalid && form.submitted" class="a-input-invalid">
+                        Gweicht wird benötigt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="hairColorInput">Haarfarbe</label>
+                    <input type="text" name="haircolor" [(ngModel)]="character.hair_color" #hairColor="ngModel" class="form-control" id="hairColorInput" placeholder="Haarfarbe eingeben" required>
+                    <div *ngIf="hairColor.invalid && form.submitted" class="a-input-invalid">
+                        Haarfarbe wird benötigt.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="eyeColorInput">Augenfarbe</label>
+                    <select class="form-control" name="eyeColor" [(ngModel)]="character.eye_color" #eyeColor="ngModel" id="eyeColorInput" required>
+                        <option></option>
+                        <option>Blau</option>
+                        <option>Gelb</option>
+                        <option>Rot</option>
+                    </select>
+                    <div *ngIf="eyeColor.invalid && form.submitted" class="a-input-invalid">
+                        Augenfarbe wird benötigt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="birthYear">Geburtsjahr</label>
+                    <input type="number" name="birthYear" [(ngModel)]="character.birth_year" #birthYear="ngModel" class="form-control" id="birthYear" placeholder="YYYY" required>
+                    <div *ngIf="birthYear.invalid && form.submitted" class="a-input-invalid">
+                        Geburtsjahr wird benötigt.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="genderInput">Geschlecht</label>
+                    <select class="form-control" name="gender" [(ngModel)]="character.gender" #gender="ngModel" id="genderInput" required>
+                        <option></option>
+                        <option>Männlich</option>
+                        <option>Weiblich</option>
+                        <option>Divers</option>
+                    </select>
+                    <div *ngIf="gender.invalid && form.submitted" class="a-input-invalid">
+                        Geschlecht wird benötigt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a-form-buttons">
+            <button type="button" (click)="close()" class="a-button-close">Abbrechen</button>
+            <button type="submit" class="a-button-save">Charakter hinzufügen</button>
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,9 @@
+<div class="a-header text-center">
+    <h1>Filme</h1>
+</div>
+
+<div class="row">
+    <div *ngFor="let film of films" class="col-lg-4 col-md-6 col-sm-12 a-lists">
+        <app-film-list-item [film]="film"></app-film-list-item>
+    </div>
+</div>

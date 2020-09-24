@@ -1,0 +1,82 @@
+<div class="a-form">
+    <h5>Planet hinzufügen</h5>
+
+    <form #form="ngForm" (ngSubmit)="form.valid && submit()">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="nameInput">Name</label>
+                    <input type="text" name="name" [(ngModel)]="planet.name" #name="ngModel" class="form-control" id="nameInput" placeholder="Name eingeben" required>
+                    <div *ngIf="name.invalid && form.submitted" class="a-input-invalid">
+                        Name wird benötigt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="terrainInput">Terrain</label>
+                    <input type="number" name="terrain" [(ngModel)]="planet.terrain" #terrain="ngModel" class="form-control" id="terrainInput" placeholder="Terrain" required>
+                    <div *ngIf="terrain.invalid && form.submitted" class="a-input-invalid">
+                        Terrain wird benötigt.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="climateInput">Climate</label>
+                    <input type="text" name="climate" [(ngModel)]="planet.climate" #climate="ngModel" class="form-control" id="climateInput" placeholder="Climate" required>
+                    <div *ngIf="climate.invalid && form.submitted" class="a-input-invalid">
+                        Climate wird benötigt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="diameterInput">Diameter</label>
+                    <input type="number" name="diameter" [(ngModel)]="planet.diameter" #diameter="ngModel" class="form-control" id="diameterInput" placeholder="Diameter" required>
+                    <div *ngIf="diameter.invalid && form.submitted" class="a-input-invalid">
+                        Diameter wird benötigt.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="gravityInput">Gravity</label>
+                    <input type="text" name="gravity" [(ngModel)]="planet.gravity" #gravity="ngModel" class="form-control" id="diameterInput" placeholder="Gravity" required>
+                    <div *ngIf="gravity.invalid && form.submitted" class="a-input-invalid">
+                        Gravity wird benötigt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="populationInput">Population</label>
+                    <input type="number" name="population" [(ngModel)]="planet.population" #population="ngModel" class="form-control" id="populationInput" placeholder="Population" required>
+                    <div *ngIf="population.invalid && form.submitted" class="a-input-invalid">
+                        Population wird benötigt.
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label for="rotationPeriod">Rotation period</label>
+                    <input type="text" name="rotationPeriod" [(ngModel)]="planet.rotation_period" #rotationPeriod="ngModel" class="form-control" id="rotationPeriod" placeholder="Rotation period" required>
+                    <div *ngIf="rotationPeriod.invalid && form.submitted" class="a-input-invalid">
+                        Rotation period wird benötigt.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="a-form-buttons">
+            <button type="button" (click)="close()" class="a-button-close">Abbrechen</button>
+            <button type="submit" class="a-button-save">Charakter hinzufügen</button>
+        </div>
+    </form>
+
+</div>

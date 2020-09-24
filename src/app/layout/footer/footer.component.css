@@ -1,0 +1,25 @@
+.a-footer {
+    border-top: 1px solid #BBBBBB;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.a-footer-content {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #BBBBBB;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+@media only screen and (max-width: 720px) {
+    .a-footer-content {
+        width: 98%;
+    }
+}
+

@@ -1,0 +1,16 @@
+<div class="a-list-item mb-3">
+    <div class="a-list-item-header">
+        <img src="assets/images/planets/{{image}}" alt="SW">
+    </div>
+    <div class="a-list-item-body">
+        <h5>{{ planet?.name }}</h5>
+        <p>
+            Terrain: {{ planet?.terrain }} <br>
+            Climate: {{ planet?.climate }} <br>
+            Diameter: {{ planet?.diameter }}
+        </p>
+        <p class="a-list-item-footer">
+            <span class="cursor-pointer" (click)="goToDetails(planet.url)">Mehr Informationen....</span>
+        </p>
+    </div>
+</div>
