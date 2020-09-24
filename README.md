@@ -20,8 +20,8 @@ Components:
 
 ## Setup
 
-run `npm install` command to install the dependencies
-run `ng serve` command to run the app
+* run `npm install` command to install the dependencies
+* run `ng serve` command to run the app
 
 ## Dependencies and packages
 
